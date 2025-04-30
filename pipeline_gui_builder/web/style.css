@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 600px;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  box-shadow: 3px 0px 5px #00000026;
+  z-index: 1;
+}
+
+#dynamic-categories {
+  background-color: #dfdfdf;
+}
+
+#main {
+  flex: 1;
+  padding: 0px 20px;
+  background: #f9f9f9;
+  overflow-y: auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  text-align: center;
+  height: calc(94px - 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category {
+  background-color: #dfdfdf;
+  width: 100%;
+}
+
+.category h3 {
+  margin: 0;
+  padding: 16px 0 16px 12px;
+  color: #444;
+  height: 100%;
+  box-shadow: 0px 1px 5px 2px #00000026;
+}
+
+.category h3:hover {
+  background-color: #e6e6e6;
+}
+
+.category button {
+  display: block;
+  height: 100%;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+}
+
+.button-container button:hover {
+  background-color: #ececec !important;
+}
+
+.category .buttons {
+  display: none;
+  width: 100%;
+}
+
+.category .buttons button {
+  width: 100%;
+  padding-left: 12px;
+  padding-top: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px 25px 0px 0px;
+  background-color: white;
+}
+
+.category .buttons p {
+  margin-left: 12px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  padding-bottom: 6px;
+}
+
+.button-container {
+  border-radius: 0px 25px 25px 0px;
+  background-color: white;
+  margin-left: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  box-shadow: 5px 3px 5px #00000026;
+}
+
+#controls {
+  margin: 12px 0px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.generate {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 40px;
+  padding: 16px;
+  border: none;
+  border-radius: 25px;
+  background-color: #4caf50;
+  color: white;
+}
+
+.generate:hover {
+  background-color: #45a049;
+  cursor: pointer;
+}
+
+#controls label {
+  display: block;
+  padding: 12px 0px;
+}
+
+#controls input[type="checkbox"] {
+  margin: 0;
+  margin-right: 12px;
+}
+
+#pipelineList {
+  list-style: none;
+  padding: 0;
+}
+
+#pipelineList li {
+  background: white;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+#pipelineList button {
+  margin: 0px 4px;
+  width: 24px;
+  height: 24px;
+  padding: 0px;
+  border-radius: 100%;
+}
+
+#pipelineList button:hover {
+  margin: 0px 4px;
+  background-color: #ececec !important;
+}
+
+.icon-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid black;
+}
+
+#pipelineList button,
+.icon-up {
+  padding-bottom: 2px;
+}
+
+.icon-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid black;
+  transform: rotate(180deg);
+}
+
+.icon-close {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-close::before,
+.icon-close::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 2px;
+  height: 12px;
+  background-color: black;
+  padding-top: 4px;
+}
+
+.icon-close::before {
+  transform: rotate(45deg);
+}
+
+.icon-close::after {
+  transform: rotate(-45deg);
+}

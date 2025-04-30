@@ -1,0 +1,16 @@
+.env
+*/IN/
+IN/
+*/OUT/
+OUT/
+*__pycache__/
+.venv
+run.bat
+log/
+*.log
+*.egg-info
+*.egg
+*personal_jobs/
+jobs/*
+!jobs/__init__.py
+!jobs/sample_job/

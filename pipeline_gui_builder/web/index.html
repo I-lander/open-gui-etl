@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pipeline GUI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="sidebar">
+      <h2>Function Blocks</h2>
+      <div id="dynamic-categories"></div>
+    </div>
+
+    <div id="main">
+      <div id="controls">
+        <button class="generate" onclick="generate()">Generate Script</button>
+        <div class="checkboxes">
+          <label>
+            <input type="checkbox" id="generateLocalFiles" /> Generate Local
+            Files
+          </label>
+        </div>
+      </div>
+
+      <ul id="pipelineList"></ul>
+    </div>
+
+    <script>
+      function toggleCategory(header) {
+        const buttons = header.nextElementSibling;
+        if (buttons.style.display === "block") {
+          buttons.style.display = "none";
+        } else {
+          buttons.style.display = "block";
+        }
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

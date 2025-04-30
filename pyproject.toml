@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "open-gui-etl"
+version = "0.1.0"
+description = "Python jobs for light ETL"
+authors = ["Ilan Varillon <ilan.varillon@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "utils" }, { include = "jobs" }]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+boto3 = "1.37.22"
+botocore = "1.37.22"
+certifi = "2025.1.31"
+charset-normalizer = "3.4.1"
+et_xmlfile = "2.0.0"
+idna = "3.10"
+jmespath = "1.0.1"
+numpy = "2.2.4"
+openpyxl = "3.1.5"
+pandas = "2.2.3"
+python-dateutil = "2.9.0.post0"
+python-dotenv = "1.1.0"
+pytz = "2025.2"
+requests = "2.32.3"
+s3transfer = "0.11.4"
+setuptools = "78.1.0"
+six = "1.17.0"
+tzdata = "2025.2"
+urllib3 = "2.3.0"
+pywebview = "^4.0"
+pythonnet = { version = "^3.0.5", python = "<3.14" }
+google-api-python-client = "^2.167.0"
+google-auth = "^2.39.0"
+google-auth-oauthlib = "^1.2.1"
+google-auth-httplib2 = "^0.2.0"
+tqdm = "^4.67.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
